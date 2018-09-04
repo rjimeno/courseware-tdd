@@ -6,10 +6,14 @@ class BodyOfText:
         if '' == self.text:
             result = 0
         else:
-            result = self.text.count("\n") + 1
+            result = self.text.count('\n') + 1
         return result
 
     def paragraphs(self):
-        return []
+        if '' == self.text:
+            result = []
+        else:
+            result = self.text.split('\n')
+        return result
 
 # Copyright 2015-2018 Aaron Maxwell. All rights reserved.
